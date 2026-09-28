@@ -1,0 +1,147 @@
+/* estilos.css */
+html{
+    font-family: "Montserrat" , sans-serif;
+}
+body {
+    margin: 0;
+    background-color: #56727e;
+}
+
+header{
+    background-color:#182b33;
+    color:white;
+    padding: 3rem 2rem
+}
+
+header h1{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.container{
+    max-width: 960 px;
+    margin: 0 auto;
+}
+
+section article {
+    transition: box-shadow 0.3s ease;
+    background-color: hsl(0, 0%, 100%);
+    margin: 1rem 0;
+    border-radius: 0.5rem ;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+
+section article:hover{
+    box-shadow: 0  0.1rem  0.4rem  rgba(0,0,0,0.3)
+}
+section article h2, section article p {
+    margin: 1rem;
+    width:100%
+}
+
+section article h3, section article p {
+    margin: 1rem;
+}
+
+footer{
+    background-color:#222;
+    padding: 3rem;
+    color: #49494b;
+}
+footer section {
+    float: right;
+}
+
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    color:#fff;
+    text-decoration: none;
+}
+
+
+.funda-container {
+    width: 300px;
+    height: 600px;
+    margin: 20px auto;
+}
+
+#funda-actual {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria-disenos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 70px;
+}
+
+.miniatura {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+    border-radius: 8px;
+}
+
+.miniatura:hover {
+    transform: scale(1.05);
+    border-color: #333;
+}
+
+@media (max-width: 768px) {
+  /* Resetea los estilos para el cuerpo */
+  body {
+    padding: 0 10px; /* Añade un padding horizontal para que el contenido no toque los bordes */
+  }
+
+  /* El contenedor ahora ocupará el 90% del ancho de la pantalla */
+  .container {
+    width: 90%;
+  }
+
+  /* Hace que el encabezado sea más pequeño y con menos padding */
+  header {
+    padding: 2rem 1rem;
+  }
+  
+  /* Reduce el tamaño de la fuente para el título principal */
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Ajusta el tamaño del contenedor de la funda del celular */
+  .funda-container {
+    width: 250px; /* Reduce el ancho del contenedor */
+    height: 500px; /* Reduce la altura */
+    margin: 20px auto;
+  }
+
+  /* El pie de página ya no flotará a la derecha para que no se superponga */
+  footer section {
+    float: none;
+    text-align: center;
+  }
+
+  /* Organiza las miniaturas en una columna en lugar de una fila */
+  .galeria-disenos {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra las miniaturas */
+    gap: 10px; /* Reduce la separación entre ellas */
+  }
+
+  /* Ajusta el tamaño de las miniaturas para que sean más grandes y fáciles de tocar */
+  .miniatura {
+    width: 100px;
+    height: 100px;
+  }
+}
